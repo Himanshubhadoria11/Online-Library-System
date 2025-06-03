@@ -13,7 +13,7 @@ An online platform built with **React** and **Vite** that allows users to browse
 
 ``````````bash
 
-git clone 
+git clone https://github.com/Himanshubhadoria11/Online-Library-System.git 
 cd Online-Library-System
 cd vite-project
 npm install
@@ -25,7 +25,7 @@ npm run dev
 
 ``````````bash
 
-git clone 
+git clone https://github.com/Himanshubhadoria11/Online-Library-System.git 
 
 `````````````
 
