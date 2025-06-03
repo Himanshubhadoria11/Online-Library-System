@@ -123,3 +123,5 @@ const BrowseBooksPage = ({ showRemoveButton = false }) => {
 };
 
 export default BrowseBooksPage;
+
+

@@ -48,28 +48,41 @@ const routers = [
       },
 
 
-        {
-        path: "/add-book",
-        element: <AddBookPage/>,
-        // children: [
-        //   {
-        //     path: "/book-details/:id",
-        //     element: < BookDetailsPage/>,
-        //   },
-        // ],
-      },
+      //   {
+      //   path: "/add-book",
+      //   element: <AddBookPage/>,
+      //   children: [
+      //     {
+      //       path: "/book-details/:id",
+      //       element: < BookDetailsPage/>,
+      //     },
+      //   ],
+      // },
+
+      //  {
+      //   path: "/remove-book",
+      //   element: <RemoveBook/>,
+      //   children: [
+      //     {
+      //       path: "/book-details/:id",
+      //       element: < BookDetailsPage/>,
+      //     },
 
        {
-        path: "/remove-book",
-        element: <RemoveBook/>,
-        // children: [
-        //   {
-        //     path: "/book-details/:id",
-        //     element: < BookDetailsPage/>,
-        //   },
-        // ],
+        path: "/add-book",
+        element: <AddBookPage />,
       },
-    ],
+      {
+        path: "/remove-book",
+        element: <RemoveBook />,
+      },
+      {
+        path: "/book-details/:id",
+        element: <BookDetailsPage />,
+      },
+        ],
+    //   },
+    // ],
     errorElement: <NotFoundPage />,
   },
 ];
