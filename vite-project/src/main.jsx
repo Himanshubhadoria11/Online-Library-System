@@ -15,6 +15,7 @@ import BookDetailsPage from "./pages/BookDetailsPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import "./index.css";
 import RemoveBook from "./pages/RemoveBook.jsx";
+
 //  import App from "./App.jsx";
 // import "./index.css";
 // import HomePage from "./pages/HomePage.jsx";
@@ -45,21 +46,28 @@ const routers = [
           },
         ],
       },
-      {
+
+
+        {
         path: "/add-book",
-        element: <AddBookPage />,
+        element: <AddBookPage/>,
+        // children: [
+        //   {
+        //     path: "/book-details/:id",
+        //     element: < BookDetailsPage/>,
+        //   },
+        // ],
       },
-      {
-        path: "/book-details/:id",
-        element: <BookDetailsPage />,
-      },
+
        {
         path: "/remove-book",
-        element: <RemoveBook />,
-      },
-      {
-        path: "/book-details/:id",
-        element: <BookDetailsPage />,
+        element: <RemoveBook/>,
+        // children: [
+        //   {
+        //     path: "/book-details/:id",
+        //     element: < BookDetailsPage/>,
+        //   },
+        // ],
       },
     ],
     errorElement: <NotFoundPage />,
