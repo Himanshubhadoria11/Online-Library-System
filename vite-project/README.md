@@ -19,6 +19,8 @@ cd vite-project
 npm install
 npm run dev
 
+```````````
+
 
 
 ### 📁 Step 1: Clone the repository
