@@ -30,7 +30,7 @@ const initialState = {
 };
 
 
-// Consistent initial state
+//Consistent initial state
 // const initialState = {
 //   list: booksData.books || [], // Ensure it's always an array
 //   status: "idle",
@@ -41,6 +41,7 @@ const booksSlice = createSlice({
   name: "books",
   initialState,
   reducers: {
+    
 
     addNewBook: (state, action) => {
   // Determine the next available ID
@@ -54,16 +55,10 @@ const booksSlice = createSlice({
   localStorage.setItem("books", JSON.stringify(state.list));
 },
 
-//   addNewBook: (state, action) => {
-//   const newBook = { id: Date.now(), ...action.payload }; // Generate a unique ID
-//   state.list.push(newBook);
-//   localStorage.setItem("books", JSON.stringify(state.list));
-// },
 
-    // addNewBook: (state, action) => {
-    //   state.list.push(action.payload);
-    //   localStorage.setItem("books", JSON.stringify(state.list));
-    // },
+
+
+
     deleteBook: (state, action) => {
       state.list = state.list.filter((book) => book.id !== action.payload);
       localStorage.setItem("books", JSON.stringify(state.list));
