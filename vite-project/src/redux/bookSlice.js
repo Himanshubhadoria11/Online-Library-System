@@ -41,11 +41,24 @@ const booksSlice = createSlice({
   name: "books",
   initialState,
   reducers: {
+
     addNewBook: (state, action) => {
-  const newBook = { id: Date.now(), ...action.payload }; // Generate a unique ID
+  // Determine the next available ID
+  const nextId = state.list.length > 0 
+    ? Math.max(...state.list.map(book => book.id)) + 1 
+    : 1;
+
+  const newBook = { id: nextId, ...action.payload };
+
   state.list.push(newBook);
   localStorage.setItem("books", JSON.stringify(state.list));
 },
+
+//   addNewBook: (state, action) => {
+//   const newBook = { id: Date.now(), ...action.payload }; // Generate a unique ID
+//   state.list.push(newBook);
+//   localStorage.setItem("books", JSON.stringify(state.list));
+// },
 
     // addNewBook: (state, action) => {
     //   state.list.push(action.payload);
